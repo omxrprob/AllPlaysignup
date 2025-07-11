@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllPlay Recruitment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .note {
+      font-size: 12px;
+      color: gray;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Sign up for AllPlay</h2>
+  <form action="https://formsubmit.co/allplayspprt@gmail.com" method="POST">
+    <!-- Anti-spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New AllPlay Signup">
+
+    <label for="name">Full Name</label>
+    <input type="text" name="Name" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="Email" id="email" required>
+
+    <label for="platform">Which department are you applying to?</label>
+    <select name="Department" id="platform" required>
+      <option value="">-- Select One --</option>
+      <option value="Scratch">Scratch</option>
+      <option value="Roblox">Roblox</option>
+    </select>
+
+    <label for="projects">Do you have any projects published? (Links preferred)</label>
+    <textarea name="Published Projects" id="projects" rows="4" placeholder="Example: https://scratch.mit.edu/projects/... or Roblox game link"></textarea>
+
+    <label for="experience">Tell us about your experience or skills</label>
+    <textarea name="Experience" id="experience" rows="4"></textarea>
+
+    <button type="submit">Submit Application</button>
+
+    <p class="note">Your application will be sent to allplayspprt@gmail.com</p>
+  </form>
+</div>
+
+</body>
+</html>
