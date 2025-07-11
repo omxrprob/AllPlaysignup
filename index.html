@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AllPlay Recruitment</title>
   <style>
     body {
@@ -43,30 +43,39 @@
       color: gray;
       margin-top: 10px;
     }
+    #otherField {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>Sign up for AllPlay</h2>
+  <h2>Join the AllPlay Company</h2>
   <form action="https://formsubmit.co/allplayspprt@gmail.com" method="POST">
-    <!-- Anti-spam -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New AllPlay Signup">
+    <!-- Anti-spam & subject -->
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="New AllPlay Signup" />
 
     <label for="name">Full Name</label>
-    <input type="text" name="Name" id="name" required>
+    <input type="text" name="Name" id="name" required />
 
     <label for="email">Email</label>
-    <input type="email" name="Email" id="email" required>
+    <input type="email" name="Email" id="email" required />
 
     <label for="platform">Which department are you applying to?</label>
-    <select name="Department" id="platform" required>
+    <select name="Department" id="platform" onchange="toggleOtherField()" required>
       <option value="">-- Select One --</option>
       <option value="Scratch">Scratch</option>
       <option value="Roblox">Roblox</option>
-      <option value="other">other</option>
+      <option value="Other">Other</option>
     </select>
+
+    <!-- Shows only if 'Other' is selected -->
+    <div id="otherField">
+      <label for="otherDepartment">Specify what you want to do</label>
+      <input type="text" name="Other Department" id="otherDepartment" placeholder="Example: Unity dev, pixel art, web games..." />
+    </div>
 
     <label for="projects">Do you have any projects published? (Links preferred)</label>
     <textarea name="Published Projects" id="projects" rows="4" placeholder="Example: https://scratch.mit.edu/projects/... or Roblox game link"></textarea>
@@ -79,6 +88,19 @@
     <p class="note">Your application will be sent to allplayspprt@gmail.com</p>
   </form>
 </div>
+
+<!-- Script for showing 'Other' input -->
+<script>
+  function toggleOtherField() {
+    const select = document.getElementById("platform");
+    const otherField = document.getElementById("otherField");
+    if (select.value === "Other") {
+      otherField.style.display = "block";
+    } else {
+      otherField.style.display = "none";
+    }
+  }
+</script>
 
 </body>
 </html>
