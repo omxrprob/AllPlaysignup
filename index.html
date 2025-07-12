@@ -22,18 +22,20 @@
       text-align: center;
       color: #333;
     }
-    input, textarea, select, button {
+    input, textarea, select, button, .link-button {
       width: 100%;
       padding: 10px;
       margin-top: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      box-sizing: border-box;
     }
     button {
       background-color: #4CAF50;
       color: white;
       font-size: 16px;
       cursor: pointer;
+      border: none;
     }
     button:hover {
       background-color: #45a049;
@@ -45,6 +47,17 @@
     }
     #otherField {
       display: none;
+    }
+    .link-button {
+      background-color: #7289DA;
+      color: white;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .link-button:hover {
+      background-color: #5b6eae;
     }
   </style>
 </head>
@@ -94,6 +107,9 @@
     <p class="note">If you don’t enter anything above, we’ll contact you through your email.</p>
     <p class="note">Your application will be sent to allplayspprt@gmail.com</p>
   </form>
+
+  <!-- Join Discord button -->
+  <a href="https://discord.gg/WV3fGfKq5a" target="_blank" class="link-button">Join our Discord</a>
 </div>
 
 <!-- Script for showing 'Other' input -->
