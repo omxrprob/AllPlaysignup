@@ -57,7 +57,7 @@
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_subject" value="New AllPlay Signup" />
 
-    <label for="name"> Name/what we should call you</label>
+    <label for="name">Full Name</label>
     <input type="text" name="Name" id="name" required />
 
     <label for="email">Email</label>
@@ -68,8 +68,8 @@
       <option value="">-- Select One --</option>
       <option value="Scratch">Scratch</option>
       <option value="Roblox">Roblox</option>
+      <option value="Unity">Unity</option>
       <option value="Other">Other</option>
-      <option value="both">All</option>
     </select>
 
     <!-- Shows only if 'Other' is selected -->
@@ -87,6 +87,7 @@
     <label for="contact">How can we contact you? (Optional)</label>
     <input type="text" name="Preferred Contact" id="contact" placeholder="Example: Discord tag, TikTok, YT channel...">
 
+    <p class="note">Clicking ‘Submit Application’ automatically makes you agree to the ToS</p>
     <button type="submit">Submit Application</button>
 
     <p class="note">If you don’t enter anything above, we’ll contact you through your email.</p>
